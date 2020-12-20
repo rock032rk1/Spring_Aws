@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+      
+       <div class="container">
+       <h1 style="text-align: center; color: blue;">List Of Employee</h1>
+       <a th:href="@{/regist}">Registration Page</a> 	
+		 <table class="table table-striped">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Mobile</th>
+					<th>Password</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="st:${elist}">
+					<td th:text="${st.eid}"></td>
+					<td th:text="${st.name}"></td>
+					<td th:text="${st.email}"></td>
+					<td th:text="${st.mobile}"></td>
+					<td th:text="${st.password}"></td>
+				</tr>
+			</tbody>
+		</table>
+</div>
+</body>
+</html>
