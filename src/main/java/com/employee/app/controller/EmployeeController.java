@@ -17,7 +17,7 @@ import com.employee.app.dto.Employee;
 import com.employee.app.repository.EmployeeRepository;
 
 @Controller
-@RequestMapping("/mynew_java_update/")
+//@RequestMapping("/mynew_java_update/")
 public class EmployeeController {
 
 	@Autowired
@@ -30,7 +30,7 @@ public class EmployeeController {
 //		return e1;
 //	}
 	
-	@GetMapping("/mynew_java_update/login")
+	@GetMapping("/login")
 	public String loginPage() {
 		
 		return "registration";
