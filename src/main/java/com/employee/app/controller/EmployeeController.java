@@ -10,12 +10,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.employee.app.dto.Employee;
 import com.employee.app.repository.EmployeeRepository;
 
 @Controller
+@RequestMapping("/mynew_java_update/")
 public class EmployeeController {
 
 	@Autowired
@@ -28,7 +30,7 @@ public class EmployeeController {
 //		return e1;
 //	}
 	
-	@GetMapping("/login")
+	@GetMapping("/mynew_java_update/login")
 	public String loginPage() {
 		
 		return "registration";
